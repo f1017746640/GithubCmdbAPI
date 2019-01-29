@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.http import HttpResponse
 from func import cmdbuild_token
 from func import cmdbuild_class
 from func import cmdbuild_env
 from func import cmdbuild_business
+from func import cmdbuild_server
 
 
 def test_httpresponse(request):
@@ -36,5 +36,5 @@ def response_cmdbuild_business(request):
 
 
 def response_cmdbuild_server(request):
-    server = cmdbuild_business()
+    server = cmdbuild_server()
     return HttpResponse(server)

@@ -6,15 +6,18 @@
   > Mail: fzh42353@ly.com
   > CreatedTime: 18/12/14 下午2:56
 """
+import requests
+from cmdbuild.config import *
 from .get_cmdbuild_token import cmdbuild_token
+from cmdbuild.CmdbClassAPI import cmdb_class_api
+
+CLASS = cmdb_class_api('CLASS')['cls']
 
 
 def cmdbuild_class():
     token = cmdbuild_token()
     if token:
-        import requests
-
-        url = "http://10.100.172.112:8080/services/rest/v2/classes"
+        url = URI_CLASS
 
         headers = {
             'Content-Type': "application/json",

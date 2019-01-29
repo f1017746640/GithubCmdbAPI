@@ -9,10 +9,14 @@
 import json
 import requests
 from cmdbuild.config import *
+from cmdbuild.CmdbClassAPI import cmdb_class_api
+
+SESSIONS = cmdb_class_api('SESSIONS')['cls']
 
 
 def cmdbuild_token():
-    url = PRE_CMDB + MID_CMDB + PRO_SESSION
+
+    url = URI_TOKEN + SESSIONS
 
     payload = {
         "username": USER_NAME,

@@ -10,18 +10,14 @@
 # cmdbuild前缀
 PRE_CMDB = 'http://10.100.172.112:8080'
 
-# cmdbuild api版本
-MID_CMDB = '/services/rest/v2/'
+# cmdbuild token URI
+URI_TOKEN = PRE_CMDB + '/services/rest/v2/'
 
-# 获取cmdbuild session后缀
-PRO_SESSION = 'sessions'
+# cmduild class URI
+URI_CLASS = PRE_CMDB + '/services/rest/v2/classes/'
 
 # 登录cmdbuild的账号
 USER_NAME = 'admin'
 
 # 登录cmdbuild的密码
 PASSWORD = 'admin'
-
-
-
-

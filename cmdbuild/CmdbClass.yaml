@@ -1,0 +1,14 @@
+SESSIONS:
+  cls: sessions
+
+SERVER:
+  cls: server
+
+ENV:
+  cls: env
+
+CLASS:
+  cls: classes
+
+BUSINESS:
+  cls: business

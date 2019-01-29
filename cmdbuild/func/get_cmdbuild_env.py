@@ -6,15 +6,18 @@
   > Mail: fzh42353@ly.com
   > CreatedTime: 18/12/14 下午5:42
 """
-
+from cmdbuild.config import *
 from .get_cmdbuild_token import cmdbuild_token
+from cmdbuild.CmdbClassAPI import cmdb_class_api
 import requests
+
+ENV = cmdb_class_api('ENV')['cls']
 
 
 def cmdbuild_env():
     token = cmdbuild_token()
     if token:
-        url = "http://10.100.172.112:8080/services/rest/v2/classes/env/cards"
+        url = URI_CLASS + ENV + "/cards"
 
         headers = {
           'Content-Type': "application/json",
